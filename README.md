@@ -62,7 +62,7 @@ The dataset provided by Amazon had several issues that made it unsuitable for an
 ### **1. Removing Duplicates in ASIN Column**
 We used the **Sort** component in the **Data Flow Task** to sort data by **ASIN** and remove duplicates, ensuring only one unique record for each **ASIN**.
 
-![SSIS Sort and Remove Duplicates](./images/SSIS_Sort_And_Remove_Duplicates.png)
+![SSIS Sort and Remove Duplicates](image/SSIS_Sort_And_Remove_Duplicates.png)
 
 ---
 
