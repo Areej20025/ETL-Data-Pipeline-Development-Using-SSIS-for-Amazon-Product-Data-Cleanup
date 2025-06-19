@@ -1,214 +1,150 @@
-# ETL Data Pipeline Development Using SSIS for Amazon Product Data Cleanup
+# ETL Data Pipeline Development Using SSIS for Amazon Product Data Cleaning
 
-This project demonstrates how to clean Amazon product data using **SQL Server Integration Services (SSIS)**. Below is the step-by-step breakdown of the process, including before and after images for each phase.
+This project demonstrates how to clean Amazon product data using **SQL Server Integration Services (SSIS)**. Below is a detailed explanation of the process, along with before and after images for each stage.
 
-**Source of Data:** [Amazon Product Data from Kaggle](https://www.kaggle.com/datasets/mohammedalsubaie/amazon-products)
-
----
-
-## **Project Overview**
-
-The **ETL pipeline** was developed using **SSIS** to clean Amazon product data. This pipeline handled several key operations:
-- **Removing duplicates** in the **ASIN** column.
-- **Replacing missing values (NULL)** in key columns such as **reviews**, **price**, **rating**, etc.
-- **Removing irrelevant columns** that were not necessary for analysis, like **fastest_delivery_date** and **free_delivery_date**.
-- **Exporting data** with missing prices to an **Excel file** and inserting data with valid prices into a **SQL database**.
+**Data Source:** [Amazon Product Data from Kaggle](https://www.kaggle.com/datasets/mohammedalsubaie/amazon-products)
 
 ---
 
-## **Dataset Description**
+## Project Overview
 
-This dataset provides key product information from Amazon's Saudi Arabia region, including details such as product titles, prices in USD, ratings, reviews, and availability of services like Prime and Amazon's Choice.
+An ETL pipeline was developed using SSIS to clean Amazon product data. The process included:
 
-### Column Descriptions:
-
-1. **asin**: A unique alphanumeric identifier assigned by Amazon to each product.
-2. **title**: The name or title of the product as displayed on Amazon.
-3. **price**: The current selling price of the product (in USD).
-4. **list_price**: The original price of the product before any discounts are applied (in USD).
-5. **rating**: The average customer rating for the product, typically on a scale of 1 to 5 stars.
-6. **reviews**: The total number of customer reviews the product has received.
-7. **sold_past_month**: The estimated number of units sold in the last 30 days.
-8. **is_bestseller**: Indicates whether the product is a bestseller in its category.
-9. **is_prime**: Indicates whether the product is eligible for Amazon Prime benefits.
-10. **is_amazon_choice**: Indicates whether the product is "Amazon's Choice".
-11. **has_sustainability_features**: Indicates whether the product has sustainability certifications or features.
-12. **available_offers**: The number of different sellers or offers available for the product.
-13. **amazon_choice_type**: The search term or category for which the product is designated as (e.g., "Overall Pick", "New Arrival Pick").
-14. **brand**: The name of the brand or manufacturer of the product.
-15. **free_delivery_date**: The estimated date the product will be delivered with free shipping.
-16. **fastest_delivery_date**: The earliest possible delivery date, usually with expedited shipping options.
+- Removing duplicates in the **ASIN** column.
+- Handling missing values (NULL) in key columns such as **rating, reviews, price, list_price, brand, sold_past_month**.
+- Dropping irrelevant columns like **free_delivery_date** and **fastest_delivery_date**.
+- Exporting records with missing price values to Excel, and inserting complete records into a SQL Server database.
 
 ---
 
-## **Problem Statement**
+## Dataset Description
 
-The dataset provided by Amazon had several issues that made it unsuitable for analysis:
+This dataset contains product details from Amazon Saudi Arabia, including product titles, prices (USD), ratings, reviews, and services availability like Prime and Amazon's Choice.
 
-### 1. **Duplicate ASIN values**:
-- **ASIN**, which should be a unique identifier for each product, contained duplicate values.
-- This caused multiple entries for the same product.
+### Columns:
 
-### 2. **Missing (NULL) values in multiple columns**:
-- Columns like **price**, **list_price**, **rating**, **reviews**, **sold_past_month**, **brand**, **free_delivery_date**, and **fastest_delivery_date** contained many **NULL** values.
-
-### 3. **Irrelevant columns**:
-- Due to the age of the data, columns like **free_delivery_date** and **fastest_delivery_date** were identified as irrelevant and should be removed.
-
----
-
-## **Solution Using SSIS**
-
-### **1. Removing Duplicates in ASIN Column**
-We used the **Sort** component in the **Data Flow Task** to sort data by **ASIN** and remove duplicates, ensuring only one unique record for each **ASIN**.
-
-![SSIS Sort and Remove Duplicates](image/SSIS_Sort_And_Remove_Duplicates.png)
-
----
-
-### **2. Replacing NULL Values**
-We used the **Conditional Split** and **Derived Column** transformations to handle **NULL** values in the following columns:
-
-- **reviews**: Replaced `NULL` with `0`.
-- **sold_past_month**: Replaced `NULL` with `"0"`.
-- **available_offers**: Replaced `NULL` with `1`.
-- **amazon_choice_type**: Replaced `NULL` with `"None"`.
-- **brand**: Replaced `NULL` with `"Unknown"`.
-- **list_price**: Replaced `NULL` with the value from the **price** column.
-- **rating**: Replaced `NULL` with `"N/A"`.
-
-![SSIS Replace Null Values](image/SSIS_Replace_Null_Values.png)
+1. **asin**: Unique alphanumeric identifier assigned by Amazon for each product.
+2. **title**: Product name or title.
+3. **price**: Current selling price (USD).
+4. **list_price**: Original price before discounts (USD).
+5. **rating**: Average customer rating (1-5 stars).
+6. **reviews**: Total number of customer reviews.
+7. **sold_past_month**: Estimated number of units sold in the last 30 days.
+8. **is_bestseller**: Whether the product is a bestseller.
+9. **is_prime**: Whether the product is eligible for Amazon Prime.
+10. **is_amazon_choice**: Whether the product is Amazon's Choice.
+11. **has_sustainability_features**: Whether the product has sustainability certifications.
+12. **available_offers**: Number of available sellers or offers.
+13. **amazon_choice_type**: Amazon’s Choice category (Overall Pick, New Arrival Pick, etc).
+14. **brand**: Brand name or manufacturer.
+15. **free_delivery_date**: Estimated free delivery date.
+16. **fastest_delivery_date**: Earliest possible delivery date.
 
 ---
 
-### **3. Removing Irrelevant Columns**
-We used **Execute SQL Task** to remove the unnecessary columns **free_delivery_date** and **fastest_delivery_date**. Below is the SQL code used:
+## Problem Statement
 
-```sql
-DECLARE @sql AS NVARCHAR(MAX);
+The dataset faced several issues:
 
--- Check if the 'fastest_delivery_date' column exists and drop it if it does
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'NEW' AND COLUMN_NAME = 'fastest_delivery_date')
-BEGIN
-    SET @sql = 'ALTER TABLE NEW DROP COLUMN fastest_delivery_date';
-    EXEC sp_executesql @sql;
-END;
+1️⃣ **Duplicate ASIN values**  
+- The **ASIN** column, which should be unique, contained duplicates.
 
--- Check if the 'free_delivery_date' column exists and drop it if it does
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'NEW' AND COLUMN_NAME = 'free_delivery_date')
-BEGIN
-    SET @sql = 'ALTER TABLE NEW DROP COLUMN free_delivery_date';
-    EXEC sp_executesql @sql;
-END;
-````
+2️⃣ **Missing (NULL) values** in multiple columns:
+- price, list_price, rating, reviews, sold_past_month, brand, free_delivery_date, fastest_delivery_date.
+
+3️⃣ **Irrelevant columns** for analysis:
+- free_delivery_date, fastest_delivery_date.
 
 ---
 
-## **Step-by-Step Process Using SSIS**
+## Data Before and After Cleaning
 
-### **1. Import Data from Excel**
+📊 **Before Cleaning (Raw Excel Data):**  
+<img src="image/Before_Cleaning_Excel_Data.png" width="600"/>
 
-First, we import data from an **Excel file** using the **Excel Source** component in SSIS.
-
-**Explanation:**
-
-* The **Excel Connection Manager** is configured to connect to the Excel file, and the relevant sheet is selected for import.
-
-![SSIS Import Data from Excel](image/SSIS_Import_Data_Excel.png)
+📊 **After Cleaning (Data loaded into Database):**  
+<img src="image/After_Cleaning_Database_Data.png" width="600"/>
 
 ---
 
-### **2. Sort Data by ASIN and Remove Duplicates**
+## Step-by-Step Process Using SSIS
 
-We use the **Sort** transformation to sort the data based on the **ASIN** column and remove duplicate records.
+### 1️⃣ Import Data from Excel
 
-**Explanation:**
+- Imported data using **Excel Source** component in SSIS.
 
-* The **Remove rows with duplicate sort values** option is enabled to eliminate duplicate **ASIN** values.
-
-![SSIS Sort and Remove Duplicates](image/SSIS_Sort_And_Remove_Duplicates.png)
+<img src="image/SSIS_Import_Data_Excel.png" width="600"/>
 
 ---
 
-### **3. Replace NULL Values**
+### 2️⃣ Sort Data and Remove Duplicates
 
-We replace **NULL** values in key columns using the **Derived Column Transformation**.
+- Used **Sort Transformation** on **ASIN** to remove duplicate records.
 
-**Explanation:**
-
-* Columns like **reviews**, **sold\_past\_month**, and **rating** are checked for **NULL** and replaced with default values.
-
-![SSIS Replace Null Values](image/SSIS_Replace_Null_Values.png)
+<img src="image/SSIS_Sort_And_Remove_Duplicates.png" width="600"/>
 
 ---
 
-### **4. Split Rows Based on Null or Non-Null Price Values**
+### 3️⃣ Replace NULL Values
 
-The **Conditional Split** transformation is used to split the data into two paths:
+- Used **Derived Column Transformation** to replace NULL values with default values.
 
-1. Rows with **NULL** values in **price** are routed to **Rows with Null Price**.
-2. Rows with non-null values in **price** are routed to **Rows with Non-Null Price**.
-
-**Explanation:**
-
-* This allows us to process rows with missing prices separately from rows with valid prices.
-
-![SSIS Split Rows Conditional Split](image/SSIS_Split_Rows_Conditional_Split.png)
+<img src="image/SSIS_Replace_Null_Values.png" width="600"/>
 
 ---
 
-### **5. Insert Data into Database**
+### 4️⃣ Conditional Split Based on Price Column
 
-Rows with **non-null** **price** values are inserted into the **database** using the **OLE DB Destination**.
+- Used **Conditional Split Transformation** to separate records:
+  - Records with missing price values.
+  - Records with valid price values.
 
-**Explanation:**
-
-* **Rows with Non-Null Price** are inserted into the **Amazon Products** table in the database.
-
-![SSIS Insert Into Database](image/SSIS_Insert_Into_Database.png)
+<img src="image/SSIS_Split_Rows_Conditional_Split.png" width="600"/>
 
 ---
 
-### **6. Export Rows with Null Price to Excel**
+### 5️⃣ Insert Cleaned Data into Database
 
-Rows with missing **price** values are exported to an **Excel file**.
+- Inserted records with valid prices into SQL Server database using **OLE DB Destination**.
 
-**Explanation:**
-
-* **Rows with Null Price** are exported to a separate **Excel file** for further review.
+<img src="image/SSIS_Insert_Into_Database.png" width="600"/>
 
 ---
 
-## **Conclusion**
+### 6️⃣ Export Records with Missing Prices to Excel
 
-This project demonstrates how to clean and transform Amazon product data using **SSIS**. The **ETL process** ensures that the data is cleaned, transformed, and loaded correctly into the database for further analysis.
-
----
-
-### **Summary of Steps**:
-
-1. **Import Data from Excel**: Import the raw data from the Excel sheet.
-2. **Sort and Remove Duplicates**: Ensure that each product is unique by removing duplicate **ASIN** values.
-3. **Replace NULL Values**: Handle missing values by replacing them with meaningful defaults.
-4. **Split Rows Based on Price**: Separate rows with missing prices for further handling.
-5. **Insert Data into Database**: Insert cleaned data into the database.
-6. **Export Data with Null Price**: Export rows with missing prices for further review.
-
-This process ensures that the product data is cleansed, transformed, and stored in a usable format for further analysis.
+- Exported records with missing prices into a separate Excel file for further review.
 
 ---
 
-### **Steps for Uploading on GitHub**:
+## Full ETL Pipeline Flow in SSIS
 
-1. **Upload Images to GitHub**:
+### 🔄 Control Flow:
+<img src="image/SSIS Control Flow After Running.png" width="600"/>
 
-   * Create a folder named **images** in your GitHub project.
-   * Upload all the images used in this process into this folder.
+### 🔄 Data Flow:
+<img src="image/SSIS Data Flow Process.png" width="600"/>
 
-2. **Upload README.md File**:
+---
 
-   * Upload the **README.md** file with the detailed description and images to your GitHub repository.
-   * Ensure that the images display correctly next to their respective explanations.
+## Conclusion
 
-```
+This project demonstrates how to clean and transform Amazon product data using **SSIS**. The ETL process involved:
+
+- Removing duplicates.
+- Handling missing values.
+- Dropping irrelevant columns.
+- Loading clean data into SQL Server for further analysis.
+
+---
+
+## Process Summary
+
+1. Import data from Excel.
+2. Sort and remove duplicate ASIN values.
+3. Replace missing values with defaults.
+4. Split data based on price presence.
+5. Load cleaned data into SQL Server database.
+6. Export incomplete records for further review.
+
 
