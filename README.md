@@ -77,7 +77,7 @@ We used the **Conditional Split** and **Derived Column** transformations to hand
 - **list_price**: Replaced `NULL` with the value from the **price** column.
 - **rating**: Replaced `NULL` with `"N/A"`.
 
-![SSIS Replace Null Values](/images/SSIS_Replace_Null_Values.png)
+![SSIS Replace Null Values](image/SSIS_Replace_Null_Values.png)
 
 ---
 
@@ -114,7 +114,7 @@ First, we import data from an **Excel file** using the **Excel Source** componen
 
 * The **Excel Connection Manager** is configured to connect to the Excel file, and the relevant sheet is selected for import.
 
-![SSIS Import Data from Excel](/images/SSIS_Import_Data_Excel.png)
+![SSIS Import Data from Excel](image/SSIS_Import_Data_Excel.png)
 
 ---
 
@@ -126,7 +126,7 @@ We use the **Sort** transformation to sort the data based on the **ASIN** column
 
 * The **Remove rows with duplicate sort values** option is enabled to eliminate duplicate **ASIN** values.
 
-![SSIS Sort and Remove Duplicates](/images/SSIS_Sort_And_Remove_Duplicates.png)
+![SSIS Sort and Remove Duplicates](image/SSIS_Sort_And_Remove_Duplicates.png)
 
 ---
 
