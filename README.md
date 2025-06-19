@@ -165,7 +165,7 @@ Rows with **non-null** **price** values are inserted into the **database** using
 
 * **Rows with Non-Null Price** are inserted into the **Amazon Products** table in the database.
 
-![SSIS Insert Into Database](image/SSIS_Insert_Into_Database.png)
+![SSIS Insert Into Database](<img src="image/SSIS_Insert_Into_Database.png" width="500"/>)
 
 ---
 
