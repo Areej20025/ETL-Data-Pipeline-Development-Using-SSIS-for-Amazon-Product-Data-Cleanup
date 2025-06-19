@@ -1,0 +1,2469 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/13/2025 10:34:36 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-EM6BTP1"
+  DTS:CreatorName="DESKTOP-EM6BTP1\96653"
+  DTS:DTSID="{BDACFAB7-DC01-4950-A9A7-6E4D448D5B43}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="111"
+  DTS:VersionGUID="{3D11D315-69D9-4C1C-ABB1-EFB49204E21C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FAF18932-9FFB-4818-BED7-EFDD0BC392B3}"
+      DTS:ObjectName="DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-EM6BTP1\SQLEXPRESS;Initial Catalog=Amazon_Products;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{FAF18932-9FFB-4818-BED7-EFDD0BC392B3}DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{59A6BE95-4D25-4BE5-A33A-1BCEC202E037}"
+      DTS:ObjectName="DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-EM6BTP1\SQLEXPRESS;Initial Catalog=Amazon_Products;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{59A6BE95-4D25-4BE5-A33A-1BCEC202E037}DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{556F2B87-A760-4EE7-97E4-9036566A369C}"
+      DTS:ObjectName="DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-EM6BTP1\SQLEXPRESS;Initial Catalog=Amazon_Products;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{556F2B87-A760-4EE7-97E4-9036566A369C}DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6CAF444A-4FED-43E7-BA09-7CC77DBC4853}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\my projects\SSIS\Amazon\Amazon_products -excel.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{4C43B1D7-ED51-4FBC-8ED5-FF1E53C0DCA8}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\my projects\SSIS\Amazon\PROBLEMS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C3BA66EF-98B9-48A7-B67F-FEA28E5149C7}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\my projects\SSIS\Amazon\PROBLEMS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F5FCD29A-C325-4FE9-9E3F-F662581CE60F}"
+      DTS:ObjectName="Excel Connection Manager 2 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\my projects\SSIS\Amazon\PROBLEMS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{0BDAB054-77B3-4A41-9995-53E4D390859F}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\my projects\SSIS\Amazon\Amazon_products -excel.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[File Amazon_pro_Data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{49B9DB05-22F3-487E-A1A1-0C5FAB1CD741}"
+      DTS:ObjectName="File Amazon_pro_Data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\my projects\SSIS\Amazon\Amazon_products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="asin"
+              DTS:DTSID="{02995138-0E65-4819-ADAE-E9C66134434F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="title"
+              DTS:DTSID="{E1C73B74-822F-4342-B1A1-B95D5FD4F805}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="price"
+              DTS:DTSID="{8A9C908C-B80D-407D-9BED-8866B4427DCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="list_price"
+              DTS:DTSID="{07616055-4156-41B9-8F76-C08F99C281E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rating"
+              DTS:DTSID="{0B983DCD-3A0E-4A5C-B075-57BEB6739B33}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="reviews"
+              DTS:DTSID="{AA4A165A-2886-4AF3-9A64-848C00F7ED85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sold_past_month"
+              DTS:DTSID="{DBE9D37D-9B81-4812-9694-230D4EBB6526}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="is_bestseller"
+              DTS:DTSID="{AF3E20E7-6CB5-4AA5-984A-84F82D5817C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="is_prime"
+              DTS:DTSID="{3EF8F7FE-30FF-484E-952F-5CE0AA5335B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="is_amazon_choice"
+              DTS:DTSID="{E0265FFB-D4F6-4B12-B1BD-26858345A762}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="has_sustainability_features"
+              DTS:DTSID="{E5DCFFEB-11F2-41E7-B5DA-17B620F6576A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="available_offers"
+              DTS:DTSID="{CCFF9612-9F83-438F-8C71-48B906FB3343}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="amazon_choice_type"
+              DTS:DTSID="{12E5F7E6-8EF2-4770-9C88-CF372EA8C41A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="brand"
+              DTS:DTSID="{C182C669-6DA3-4A26-A64B-E9D338F66451}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="free_delivery_date"
+              DTS:DTSID="{1B4E3259-671A-4CEB-AE35-C5C79D2A6C39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fastest_delivery_date"
+              DTS:DTSID="{CC886244-129D-4EB2-A283-CCFE07D2322A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Delete Data from Products Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C662ED5C-E319-49DA-82FE-D25F57CDDC0B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete Data from Products Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FAF18932-9FFB-4818-BED7-EFDD0BC392B3}"
+          SQLTask:SqlStatementSource="DELETE FROM products;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ETL Process for Amazon Product Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{831258DF-5A2D-45B2-BBE2-4264A6E6F030}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL Process for Amazon Product Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Export Rows with Null Price to Excel"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Excel_Destination</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[asin]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="asin"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[asin]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[asin]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[title]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="title"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[title]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[title]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[price]"
+                      cachedDataType="r8"
+                      cachedName="price"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[price]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[list_price]"
+                      cachedDataType="r8"
+                      cachedName="list_price"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[list_price]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[rating]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="rating"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[rating]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[reviews]"
+                      cachedDataType="r8"
+                      cachedName="reviews"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[reviews]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[sold_past_month]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sold_past_month"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[sold_past_month]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[is_bestseller]"
+                      cachedDataType="bool"
+                      cachedName="is_bestseller"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[is_bestseller]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_bestseller]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[is_prime]"
+                      cachedDataType="bool"
+                      cachedName="is_prime"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[is_prime]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_prime]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[is_amazon_choice]"
+                      cachedDataType="bool"
+                      cachedName="is_amazon_choice"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[is_amazon_choice]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_amazon_choice]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[has_sustainability_features]"
+                      cachedDataType="bool"
+                      cachedName="has_sustainability_features"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[has_sustainability_features]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[has_sustainability_features]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[available_offers]"
+                      cachedDataType="r8"
+                      cachedName="available_offers"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[available_offers]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[amazon_choice_type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="amazon_choice_type"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[amazon_choice_type]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[brand]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="brand"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[brand]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[free_delivery_date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="free_delivery_date"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[free_delivery_date]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[free_delivery_date]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].Columns[fastest_delivery_date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="fastest_delivery_date"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[fastest_delivery_date]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[fastest_delivery_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[asin]"
+                      dataType="wstr"
+                      length="255"
+                      name="asin" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="255"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[price]"
+                      dataType="wstr"
+                      length="255"
+                      name="price" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[list_price]"
+                      dataType="wstr"
+                      length="255"
+                      name="list_price" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[rating]"
+                      dataType="wstr"
+                      length="255"
+                      name="rating" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[reviews]"
+                      dataType="wstr"
+                      length="255"
+                      name="reviews" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[sold_past_month]"
+                      dataType="wstr"
+                      length="255"
+                      name="sold_past_month" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[is_bestseller]"
+                      dataType="wstr"
+                      length="255"
+                      name="is_bestseller" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[is_prime]"
+                      dataType="wstr"
+                      length="255"
+                      name="is_prime" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[is_amazon_choice]"
+                      dataType="wstr"
+                      length="255"
+                      name="is_amazon_choice" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[has_sustainability_features]"
+                      dataType="wstr"
+                      length="255"
+                      name="has_sustainability_features" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[available_offers]"
+                      dataType="wstr"
+                      length="255"
+                      name="available_offers" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[amazon_choice_type]"
+                      dataType="wstr"
+                      length="255"
+                      name="amazon_choice_type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[brand]"
+                      dataType="wstr"
+                      length="255"
+                      name="brand" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[free_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="free_delivery_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input].ExternalColumns[fastest_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="fastest_delivery_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Process for Amazon Product Data\Import Data from Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Import Data from Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Amazon_products - Copy$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[asin]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[asin]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[asin]"
+                      name="asin"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[title]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[title]"
+                      name="title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[price]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[price]"
+                      name="price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[list_price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[list_price]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[list_price]"
+                      name="list_price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[rating]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[rating]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[rating]"
+                      name="rating"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[reviews]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[reviews]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[reviews]"
+                      name="reviews"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[sold_past_month]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[sold_past_month]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[sold_past_month]"
+                      name="sold_past_month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_bestseller]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[is_bestseller]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_bestseller]"
+                      name="is_bestseller"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_prime]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[is_prime]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_prime]"
+                      name="is_prime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_amazon_choice]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[is_amazon_choice]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_amazon_choice]"
+                      name="is_amazon_choice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[has_sustainability_features]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[has_sustainability_features]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[has_sustainability_features]"
+                      name="has_sustainability_features"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[available_offers]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[available_offers]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[available_offers]"
+                      name="available_offers"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[amazon_choice_type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[amazon_choice_type]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[amazon_choice_type]"
+                      name="amazon_choice_type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[brand]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[brand]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[brand]"
+                      name="brand"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[free_delivery_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[free_delivery_date]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[free_delivery_date]"
+                      name="free_delivery_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[fastest_delivery_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[fastest_delivery_date]"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[fastest_delivery_date]"
+                      name="fastest_delivery_date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[asin]"
+                      dataType="wstr"
+                      length="255"
+                      name="asin" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="255"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[price]"
+                      dataType="r8"
+                      name="price" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[list_price]"
+                      dataType="r8"
+                      name="list_price" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[rating]"
+                      dataType="wstr"
+                      length="255"
+                      name="rating" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[reviews]"
+                      dataType="r8"
+                      name="reviews" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[sold_past_month]"
+                      dataType="wstr"
+                      length="255"
+                      name="sold_past_month" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[is_bestseller]"
+                      dataType="bool"
+                      name="is_bestseller" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[is_prime]"
+                      dataType="bool"
+                      name="is_prime" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[is_amazon_choice]"
+                      dataType="bool"
+                      name="is_amazon_choice" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[has_sustainability_features]"
+                      dataType="bool"
+                      name="has_sustainability_features" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[available_offers]"
+                      dataType="r8"
+                      name="available_offers" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[amazon_choice_type]"
+                      dataType="wstr"
+                      length="255"
+                      name="amazon_choice_type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[brand]"
+                      dataType="wstr"
+                      length="255"
+                      name="brand" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[free_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="free_delivery_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].ExternalColumns[fastest_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="fastest_delivery_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[asin]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[asin]"
+                      name="asin" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[title]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[title]"
+                      name="title" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[price]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[price]"
+                      name="price" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[list_price]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[list_price]"
+                      name="list_price" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[rating]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[rating]"
+                      name="rating" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[reviews]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[reviews]"
+                      name="reviews" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[sold_past_month]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[sold_past_month]"
+                      name="sold_past_month" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[is_bestseller]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[is_bestseller]"
+                      name="is_bestseller" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[is_prime]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[is_prime]"
+                      name="is_prime" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[is_amazon_choice]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[is_amazon_choice]"
+                      name="is_amazon_choice" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[has_sustainability_features]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[has_sustainability_features]"
+                      name="has_sustainability_features" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[available_offers]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[available_offers]"
+                      name="available_offers" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[amazon_choice_type]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[amazon_choice_type]"
+                      name="amazon_choice_type" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[brand]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[brand]"
+                      name="brand" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[free_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[free_delivery_date]"
+                      name="free_delivery_date" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[fastest_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[fastest_delivery_date]"
+                      name="fastest_delivery_date" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Data into Database Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[products]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-EM6BTP1\SQLEXPRESS.Amazon_Products]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[asin]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="asin"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[asin]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[asin]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[title]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="title"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[title]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[title]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[price]"
+                      cachedDataType="r8"
+                      cachedName="price"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[list_price]"
+                      cachedDataType="r8"
+                      cachedName="list_price"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[list_price]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[rating]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="rating"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[reviews]"
+                      cachedDataType="r8"
+                      cachedName="reviews"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[reviews]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[sold_past_month]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sold_past_month"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[sold_past_month]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[is_bestseller]"
+                      cachedDataType="bool"
+                      cachedName="is_bestseller"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[is_bestseller]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_bestseller]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[is_prime]"
+                      cachedDataType="bool"
+                      cachedName="is_prime"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[is_prime]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_prime]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[is_amazon_choice]"
+                      cachedDataType="bool"
+                      cachedName="is_amazon_choice"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[is_amazon_choice]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_amazon_choice]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[has_sustainability_features]"
+                      cachedDataType="bool"
+                      cachedName="has_sustainability_features"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[has_sustainability_features]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[has_sustainability_features]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[available_offers]"
+                      cachedDataType="r8"
+                      cachedName="available_offers"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[available_offers]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[amazon_choice_type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="amazon_choice_type"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[amazon_choice_type]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].Columns[brand]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="brand"
+                      externalMetadataColumnId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[brand]"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[asin]"
+                      dataType="wstr"
+                      length="255"
+                      name="asin" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="255"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      dataType="r8"
+                      name="price" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[list_price]"
+                      dataType="r8"
+                      name="list_price" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
+                      dataType="wstr"
+                      length="255"
+                      name="rating" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[reviews]"
+                      dataType="r8"
+                      name="reviews" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[sold_past_month]"
+                      dataType="wstr"
+                      length="255"
+                      name="sold_past_month" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[is_bestseller]"
+                      dataType="bool"
+                      name="is_bestseller" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[is_prime]"
+                      dataType="bool"
+                      name="is_prime" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[is_amazon_choice]"
+                      dataType="bool"
+                      name="is_amazon_choice" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[has_sustainability_features]"
+                      dataType="bool"
+                      name="has_sustainability_features" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[available_offers]"
+                      dataType="r8"
+                      name="available_offers" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[amazon_choice_type]"
+                      dataType="wstr"
+                      length="255"
+                      name="amazon_choice_type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input].ExternalColumns[brand]"
+                      dataType="wstr"
+                      length="255"
+                      name="brand" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Process for Amazon Product Data\Replace Null Values"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Replace Null Values"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[reviews]"
+                      cachedDataType="r8"
+                      cachedName="reviews"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]}) ? 0 : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(reviews) ? 0 : reviews</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[sold_past_month]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sold_past_month"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]}) ? "0" : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(sold_past_month) ? "0" : sold_past_month</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[available_offers]"
+                      cachedDataType="r8"
+                      cachedName="available_offers"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]}) ? 1 : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(available_offers) ? 1 : available_offers</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[amazon_choice_type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="amazon_choice_type"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]}) ? "None" : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(amazon_choice_type) ? "None" : amazon_choice_type</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[brand]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="brand"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]}) ? "Unknown" : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(brand) ? "Unknown" : brand</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[price]"
+                      cachedDataType="r8"
+                      cachedName="price"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]" />
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[list_price]"
+                      cachedDataType="r8"
+                      cachedName="list_price"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]}) ? #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]} : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(list_price) ? price : list_price</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input].Columns[rating]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="rating"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]}) ? "N/A" : #{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(rating) ? "N/A" : rating</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Data by ASIN and Remove Duplicates"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[asin]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="asin"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[asin]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[title]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="title"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[title]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[price]"
+                      cachedDataType="r8"
+                      cachedName="price"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[price]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[list_price]"
+                      cachedDataType="r8"
+                      cachedName="list_price"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[list_price]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[rating]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="rating"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[rating]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[reviews]"
+                      cachedDataType="r8"
+                      cachedName="reviews"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[reviews]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[sold_past_month]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sold_past_month"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[sold_past_month]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[is_bestseller]"
+                      cachedDataType="bool"
+                      cachedName="is_bestseller"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_bestseller]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[is_prime]"
+                      cachedDataType="bool"
+                      cachedName="is_prime"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_prime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[is_amazon_choice]"
+                      cachedDataType="bool"
+                      cachedName="is_amazon_choice"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_amazon_choice]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[has_sustainability_features]"
+                      cachedDataType="bool"
+                      cachedName="has_sustainability_features"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[has_sustainability_features]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[available_offers]"
+                      cachedDataType="r8"
+                      cachedName="available_offers"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[available_offers]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[amazon_choice_type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="amazon_choice_type"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[amazon_choice_type]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[brand]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="brand"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[brand]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[free_delivery_date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="free_delivery_date"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[free_delivery_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input].Columns[fastest_delivery_date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="fastest_delivery_date"
+                      lineageId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[fastest_delivery_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[asin]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[asin]"
+                      name="asin"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[asin]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[title]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[title]"
+                      name="title">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[title]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]"
+                      name="price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[list_price]"
+                      name="list_price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[list_price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[rating]"
+                      name="rating">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[rating]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[reviews]"
+                      name="reviews">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[reviews]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[sold_past_month]"
+                      name="sold_past_month">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[sold_past_month]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_bestseller]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_bestseller]"
+                      name="is_bestseller">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_bestseller]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_prime]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_prime]"
+                      name="is_prime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_prime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_amazon_choice]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[is_amazon_choice]"
+                      name="is_amazon_choice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[is_amazon_choice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[has_sustainability_features]"
+                      dataType="bool"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[has_sustainability_features]"
+                      name="has_sustainability_features">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[has_sustainability_features]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]"
+                      dataType="r8"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[available_offers]"
+                      name="available_offers">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[available_offers]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[amazon_choice_type]"
+                      name="amazon_choice_type">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[amazon_choice_type]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[brand]"
+                      name="brand">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[brand]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[free_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[free_delivery_date]"
+                      name="free_delivery_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[free_delivery_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[fastest_delivery_date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[fastest_delivery_date]"
+                      name="fastest_delivery_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output].Columns[fastest_delivery_date]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Rows Based on Null OR Non-Null Price Values"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input].Columns[price]"
+                      cachedDataType="r8"
+                      cachedName="price"
+                      lineageId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Rows with Null Price]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Rows with Null Price"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(price)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Rows with Non-Null Price]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Rows with Non-Null Price"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output].Columns[price]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(price)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL Process for Amazon Product Data.Paths[Derived Column Output]"
+              endId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\ETL Process for Amazon Product Data\Replace Null Values.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ETL Process for Amazon Product Data.Paths[Excel Source Output]"
+              endId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Inputs[Sort Input]"
+              name="Excel Source Output"
+              startId="Package\ETL Process for Amazon Product Data\Import Data from Excel.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\ETL Process for Amazon Product Data.Paths[RowsWithNOTNullPrice]"
+              endId="Package\ETL Process for Amazon Product Data\Insert Data into Database Table.Inputs[OLE DB Destination Input]"
+              name="RowsWithNOTNullPrice"
+              startId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Rows with Non-Null Price]" />
+            <path
+              refId="Package\ETL Process for Amazon Product Data.Paths[RowsWithNullPrice]"
+              endId="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel.Inputs[Excel Destination Input]"
+              name="RowsWithNullPrice"
+              startId="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values.Outputs[Rows with Null Price]" />
+            <path
+              refId="Package\ETL Process for Amazon Product Data.Paths[Sort Output]"
+              endId="Package\ETL Process for Amazon Product Data\Replace Null Values.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remove Unnecessary Columns from Products"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{90FB017C-E87D-4E03-9906-B78BCFDD70F5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remove Unnecessary Columns from Products"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FAF18932-9FFB-4818-BED7-EFDD0BC392B3}"
+          SQLTask:SqlStatementSource="DECLARE @sql AS NVARCHAR(MAX);&#xA;&#xA;&#xA;-- Check if the 'fastest_delivery_date' column exists and drop it if it does&#xA;IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'products' AND COLUMN_NAME = 'fastest_delivery_date')&#xA;BEGIN&#xA;    SET @sql = 'ALTER TABLE products DROP COLUMN fastest_delivery_date';&#xA;    EXEC sp_executesql @sql;&#xA;END;&#xA;&#xA;-- Check if the 'free_delivery_date' column exists and drop it if it does&#xA;IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'products' AND COLUMN_NAME = 'free_delivery_date')&#xA;BEGIN&#xA;    SET @sql = 'ALTER TABLE products DROP COLUMN free_delivery_date';&#xA;    EXEC sp_executesql @sql;&#xA;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA923589-3AE3-45C5-B905-0A7EE4D193E2}"
+      DTS:From="Package\Delete Data from Products Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\ETL Process for Amazon Product Data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D9A2E53D-3A3B-492C-9CB3-F7DD24B24ECF}"
+      DTS:From="Package\ETL Process for Amazon Product Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Remove Unnecessary Columns from Products" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="262.666666666667,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data"
+          TopLeft="78.4615349540346,121.315788141661" />
+        <NodeLayout
+          Size="234.666666666667,42.6666666666667"
+          Id="Package\Delete Data from Products Table"
+          TopLeft="91.5865343673012,48.1052626297084" />
+        <NodeLayout
+          Size="195.333333333334,42.6666666666667"
+          Id="Package\Remove Unnecessary Columns from Products"
+          TopLeft="107.211533668809,199.315787285237" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="209.357367994001,90.7719292963751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.5438588452856"
+              Start="0,0"
+              End="0,23.0438588452856">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.0438588452856" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="207.336534311422,163.982454808327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.3333324769091"
+              Start="0,0"
+              End="0,27.8333324769091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.8333324769091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL Process for Amazon Product Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="282.666666666667,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data\Sort Data by ASIN and Remove Duplicates"
+          TopLeft="103.749995362013,115.061402245421" />
+        <NodeLayout
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel"
+          TopLeft="8.43749962281431,343.454674591509" />
+        <NodeLayout
+          Size="188,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data\Import Data from Excel"
+          TopLeft="159.1071357445,32.9208434146426" />
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data\Replace Null Values"
+          TopLeft="149.218743329402,183.007307932137" />
+        <NodeLayout
+          Size="325.333333333334,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data\Split Rows Based on Null OR Non-Null Price Values"
+          TopLeft="95.3124957391994,257.510231090717" />
+        <NodeLayout
+          Size="229.333333333334,42.6666666666667"
+          Id="Package\ETL Process for Amazon Product Data\Insert Data into Database Table"
+          TopLeft="285.173598362858,341.059937775697" />
+        <EdgeLayout
+          Id="Package\ETL Process for Amazon Product Data.Paths[Sort Output]"
+          TopLeft="241.151036012375,157.728068912087">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.2792390200496"
+              Start="0,0"
+              End="0,17.7792390200496">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.7792390200496" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Process for Amazon Product Data.Paths[RowsWithNullPrice]"
+          TopLeft="205.090273516977,300.176897757384">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.3194405608295,43.2777768341248"
+              Start="0,0"
+              End="-71.3194405608295,35.7777768341248">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4381906656262" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4381906656262"
+                    Point2="0,17.4381906656262"
+                    Point3="-4,17.4381906656262" />
+                  <mssgle:LineSegment
+                    End="-67.3194405608295,17.4381906656262" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.3194405608295,17.4381906656262"
+                    Point2="-71.3194405608295,17.4381906656262"
+                    Point3="-71.3194405608295,21.4381906656262" />
+                  <mssgle:LineSegment
+                    End="-71.3194405608295,35.7777768341248" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.9810679366648,22.4381906656262,90.6426953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Process for Amazon Product Data.Paths[RowsWithNOTNullPrice]"
+          TopLeft="310.868051294755,300.176897757384">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.9722137347695,40.8830400183128"
+              Start="0,0"
+              End="88.9722137347695,33.3830400183128">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.4732640856823" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.4732640856823"
+                    Point2="0,16.4732640856823"
+                    Point3="4,16.4732640856823" />
+                  <mssgle:LineSegment
+                    End="84.9722137347695,16.4732640856823" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84.9722137347695,16.4732640856823"
+                    Point2="88.9722137347695,16.4732640856823"
+                    Point3="88.9722137347695,20.4732640856823" />
+                  <mssgle:LineSegment
+                    End="88.9722137347695,33.3830400183128" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.4902407888652,21.4732640856823,111.9526953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Process for Amazon Product Data.Paths[Excel Source Output]"
+          TopLeft="253.1071357445,75.5875100813092">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.02380704915328,39.4738921641113"
+              Start="0,0"
+              End="-8.02380704915328,31.9738921641113">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.7369460820557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.7369460820557"
+                    Point2="0,19.7369460820557"
+                    Point3="-4,19.7369460820557" />
+                  <mssgle:LineSegment
+                    End="-4.02380704915328,19.7369460820557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.02380704915328,19.7369460820557"
+                    Point2="-8.02380704915328,19.7369460820557"
+                    Point3="-8.02380704915328,23.7369460820557" />
+                  <mssgle:LineSegment
+                    End="-8.02380704915328,31.9738921641113" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Process for Amazon Product Data.Paths[Derived Column Output]"
+          TopLeft="237.218743329402,225.673974598803">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.760419076464,31.8362564919139"
+              Start="0,0"
+              End="20.760419076464,24.3362564919139">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.9181282459569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.9181282459569"
+                    Point2="0,15.9181282459569"
+                    Point3="4,15.9181282459569" />
+                  <mssgle:LineSegment
+                    End="16.760419076464,15.9181282459569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.760419076464,15.9181282459569"
+                    Point2="20.760419076464,15.9181282459569"
+                    Point3="20.760419076464,19.9181282459569" />
+                  <mssgle:LineSegment
+                    End="20.760419076464,24.3362564919139" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Process for Amazon Product Data\Export Rows with Null Price to Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Process for Amazon Product Data\Import Data from Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Process for Amazon Product Data\Insert Data into Database Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
