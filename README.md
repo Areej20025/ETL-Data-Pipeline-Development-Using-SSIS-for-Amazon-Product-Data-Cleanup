@@ -77,7 +77,7 @@ We used the **Conditional Split** and **Derived Column** transformations to hand
 - **list_price**: Replaced `NULL` with the value from the **price** column.
 - **rating**: Replaced `NULL` with `"N/A"`.
 
-![SSIS Replace Null Values](./images/SSIS_Replace_Null_Values.png)
+![SSIS Replace Null Values](/images/SSIS_Replace_Null_Values.png)
 
 ---
 
@@ -114,7 +114,7 @@ First, we import data from an **Excel file** using the **Excel Source** componen
 
 * The **Excel Connection Manager** is configured to connect to the Excel file, and the relevant sheet is selected for import.
 
-![SSIS Import Data from Excel](./images/SSIS_Import_Data_Excel.png)
+![SSIS Import Data from Excel](/images/SSIS_Import_Data_Excel.png)
 
 ---
 
@@ -126,7 +126,7 @@ We use the **Sort** transformation to sort the data based on the **ASIN** column
 
 * The **Remove rows with duplicate sort values** option is enabled to eliminate duplicate **ASIN** values.
 
-![SSIS Sort and Remove Duplicates](./images/SSIS_Sort_And_Remove_Duplicates.png)
+![SSIS Sort and Remove Duplicates](/images/SSIS_Sort_And_Remove_Duplicates.png)
 
 ---
 
@@ -138,7 +138,7 @@ We replace **NULL** values in key columns using the **Derived Column Transformat
 
 * Columns like **reviews**, **sold\_past\_month**, and **rating** are checked for **NULL** and replaced with default values.
 
-![SSIS Replace Null Values](./images/SSIS_Replace_Null_Values.png)
+![SSIS Replace Null Values](/images/SSIS_Replace_Null_Values.png)
 
 ---
 
@@ -153,7 +153,7 @@ The **Conditional Split** transformation is used to split the data into two path
 
 * This allows us to process rows with missing prices separately from rows with valid prices.
 
-![SSIS Split Rows Conditional Split](./images/SSIS_Split_Rows_Conditional_Split.png)
+![SSIS Split Rows Conditional Split](/images/SSIS_Split_Rows_Conditional_Split.png)
 
 ---
 
@@ -165,7 +165,7 @@ Rows with **non-null** **price** values are inserted into the **database** using
 
 * **Rows with Non-Null Price** are inserted into the **Amazon Products** table in the database.
 
-![SSIS Insert Into Database](./images/SSIS_Insert_Into_Database.png)
+![SSIS Insert Into Database](/images/SSIS_Insert_Into_Database.png)
 
 ---
 
